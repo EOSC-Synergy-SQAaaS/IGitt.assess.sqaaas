@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.7.0_no_kubectl
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.com/gitmate/open-source/IGitt:
+      branch: master
+      repo: https://gitlab.com/gitmate/open-source/IGitt
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.com/gitmate/open-source/IGitt git:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-cornflower-okapi.sh
+        container: qc.acc_chummy-sangria-bat
+  QC.Doc:
+    repos:
+      gitlab.com/gitmate/open-source/IGitt find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-brown-tuatara.sh
+        container: qc.doc_wimpy-persimmon-squid
+      gitlab.com/gitmate/open-source/IGitt git:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-lilac-tuatara.sh
+        container: qc.doc_messy-magnolia-wolverine
+      gitlab.com/gitmate/open-source/IGitt restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-eggplant-foxhound.sh
+        container: qc.doc_nippy-firebrick-chin
+  QC.FAIR:
+    repos:
+      gitlab.com/gitmate/open-source/IGitt F-UJI:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-malachite-mule.sh
+        container: qc.fair_seedy-copper-magpie
+  QC.Lic:
+    repos:
+      gitlab.com/gitmate/open-source/IGitt licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-persimmon-gar.sh
+        container: qc.lic_flabby-denim-jackal
+  QC.Sec:
+    repos:
+      gitlab.com/gitmate/open-source/IGitt bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-crimson-alligator.sh
+        container: qc.sec_woozy-turquoise-vole
+  QC.Sty:
+    repos:
+      gitlab.com/gitmate/open-source/IGitt flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-turquoise-beaver.sh
+        container: qc.sty_snippy-bistre-cattle
+  QC.Ver:
+    repos:
+      gitlab.com/gitmate/open-source/IGitt get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-cerulean-goat.sh
+        container: qc.ver_cloudy-gamboge-vulture
+timeout: 1800
