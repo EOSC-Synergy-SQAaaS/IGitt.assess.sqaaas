@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       gitlab.com/gitmate/open-source/IGitt git:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-cornflower-okapi.sh
-        container: qc.acc_chummy-sangria-bat
+        - /usr/bin/env sh .sqa/script.scummy-tomato-grasshopper.sh
+        container: qc.acc_muggy-olive-coyote
   QC.Doc:
     repos:
       gitlab.com/gitmate/open-source/IGitt find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-brown-tuatara.sh
-        container: qc.doc_wimpy-persimmon-squid
+        - /usr/bin/env sh .sqa/script.snoopy-silver-paradise.sh
+        container: qc.doc_freaky-cerise-robin
       gitlab.com/gitmate/open-source/IGitt git:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-lilac-tuatara.sh
-        container: qc.doc_messy-magnolia-wolverine
+        - /usr/bin/env sh .sqa/script.squeaky-ochre-worm.sh
+        container: qc.doc_hilly-persimmon-dragon
       gitlab.com/gitmate/open-source/IGitt restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-eggplant-foxhound.sh
-        container: qc.doc_nippy-firebrick-chin
+        - /usr/bin/env sh .sqa/script.muzzy-teal-badger.sh
+        container: qc.doc_skimpy-mauve-spoonbill
   QC.FAIR:
     repos:
       gitlab.com/gitmate/open-source/IGitt F-UJI:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-malachite-mule.sh
-        container: qc.fair_seedy-copper-magpie
+        - /usr/bin/env sh .sqa/script.pretty-heliotrope-shrew.sh
+        container: qc.fair_pokey-pumpkin-squid
   QC.Lic:
     repos:
       gitlab.com/gitmate/open-source/IGitt licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-persimmon-gar.sh
-        container: qc.lic_flabby-denim-jackal
+        - /usr/bin/env sh .sqa/script.tasty-vermilion-shrimp.sh
+        container: qc.lic_droopy-bistre-barnacle
   QC.Sec:
     repos:
       gitlab.com/gitmate/open-source/IGitt bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-crimson-alligator.sh
-        container: qc.sec_woozy-turquoise-vole
+        - /usr/bin/env sh .sqa/script.ready-eggplant-caterpillar.sh
+        container: qc.sec_cozy-ruby-cattle
   QC.Sty:
     repos:
       gitlab.com/gitmate/open-source/IGitt flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-turquoise-beaver.sh
-        container: qc.sty_snippy-bistre-cattle
+        - /usr/bin/env sh .sqa/script.squirrely-cinnabar-fowl.sh
+        container: qc.sty_zippy-platinum-indri
   QC.Ver:
     repos:
       gitlab.com/gitmate/open-source/IGitt get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-cerulean-goat.sh
-        container: qc.ver_cloudy-gamboge-vulture
+        - /usr/bin/env sh .sqa/script.slaphappy-pink-swan.sh
+        container: qc.ver_woozy-orchid-cockroach
 timeout: 1800
